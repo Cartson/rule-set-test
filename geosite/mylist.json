@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "rules": [
+      {
+        "domain": [
+          "111222.abcxyz.com",
+          "555666.abcxyz.com"
+        ],
+        "domain_suffix": [
+          "cnbeta.com.tw",
+          "linuxdo.com"
+        ]
+      }
+    ]
+}
