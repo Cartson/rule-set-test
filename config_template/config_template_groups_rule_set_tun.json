@@ -218,7 +218,43 @@
       ]
     },
     {
+      "tag":"Prime Video",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
       "tag":"Disney+",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag":"Hulu",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag":"HBO Max",
       "type":"selector",
       "outbounds":[
         "HongKong",
@@ -478,8 +514,20 @@
         "outbound": "Netflix"
       },
       {
+        "rule_set": "geosite-primevideo",
+        "outbound": "Prime Video"
+      },
+      {
         "rule_set": "geosite-disney",
         "outbound": "Disney+"
+      },
+      {
+        "rule_set": "geosite-hulu",
+        "outbound": "Hulu"
+      },
+      {
+        "rule_set": "geosite-hbo",
+        "outbound": "HBO Max"
       },
       {
         "rule_set": ["geoip-apple", "geosite-apple", "geosite-amazon"],
@@ -492,10 +540,6 @@
       {
         "rule_set": ["geosite-category-games", "geosite-dmm"],
         "outbound": "Games"
-      },
-      {
-        "rule_set": ["geosite-hbo", "geosite-primevideo"],
-        "outbound": "Streaming"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
@@ -634,10 +678,31 @@
         "download_detour": "direct"
       },
       {
+        "tag": "geosite-primevideo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+        "download_detour": "direct"
+      },
+      {
         "tag": "geosite-disney",
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-hulu",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hulu.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-hbo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
         "download_detour": "direct"
       },
       {
@@ -680,20 +745,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/dmm.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-hbo",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-primevideo",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
         "download_detour": "direct"
       },
       {
