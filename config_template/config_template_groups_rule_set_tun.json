@@ -227,14 +227,6 @@
       ]
     },
     {
-      "tag":"Amazon@CN",
-      "type":"selector",
-      "outbounds":[
-        "direct",
-        "Proxy"
-      ]
-    },
-    {
       "tag":"BiliBili",
       "type":"selector",
       "outbounds":[
@@ -473,10 +465,6 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-amazon@cn",
-        "outbound": "Amazon@CN"
-      },
-      {
         "rule_set": "geosite-openai",
         "outbound": "OpenAI"
       },
@@ -517,7 +505,7 @@
         "outbound": "Netflix"
       },
       {
-        "rule_set": ["geosite-primevideo","geosite-amazon"],
+        "rule_set": ["geosite-primevideo-dustinwin","geosite-primevideo"],
         "outbound": "Prime Video"
       },
       {
@@ -681,6 +669,13 @@
         "download_detour": "direct"
       },
       {
+        "tag": "geosite-primevideo-dustinwin",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset-compatible/primevideo.srs",
+        "download_detour": "direct"
+      },
+      {
         "tag": "geosite-primevideo",
         "type": "remote",
         "format": "binary",
@@ -720,20 +715,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-amazon@cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon@cn.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-amazon",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
         "download_detour": "direct"
       },
       {
