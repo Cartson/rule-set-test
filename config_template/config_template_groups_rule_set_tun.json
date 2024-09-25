@@ -227,7 +227,7 @@
       ]
     },
     {
-      "tag":"AWS-CN",
+      "tag":"Amazon@CN",
       "type":"selector",
       "outbounds":[
         "direct",
@@ -473,6 +473,10 @@
         "outbound": "direct"
       },
       {
+        "rule_set": "geosite-amazon@cn",
+        "outbound": "Amazon@CN"
+      },
+      {
         "rule_set": "geosite-openai",
         "outbound": "OpenAI"
       },
@@ -491,10 +495,6 @@
       {
         "rule_set":["geoip-facebook", "geosite-facebook"],
         "outbound": "Facebook"
-      },
-      {
-        "rule_set": "geosite-aws-cn",
-        "outbound": "AWS-CN"
       },
       {
         "rule_set": "geosite-bilibili",
@@ -517,7 +517,7 @@
         "outbound": "Netflix"
       },
       {
-        "rule_set": ["geosite-primevideo","geosite-aws"],
+        "rule_set": ["geosite-primevideo","geosite-amazon"],
         "outbound": "Prime Video"
       },
       {
@@ -723,17 +723,17 @@
         "download_detour": "direct"
       },
       {
-        "tag": "geosite-aws-cn",
+        "tag": "geosite-amazon@cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/aws-cn.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon@cn.srs",
         "download_detour": "direct"
       },
       {
-        "tag": "geosite-aws",
+        "tag": "geosite-amazon",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/aws.srs",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
         "download_detour": "direct"
       },
       {
